@@ -8,6 +8,7 @@ This project covers SSH key generation and configuration. It demonstrates how to
 #Scripts and usage
  0. Generate SSH key pair (0-create_ssh_key_pair.sh)
 It generates a 4096-bit RSA key pair named school
+It creates the key inside the .ssh folder and if it already exists it prints ,SSh key already exists. No new key generated.
 
 1.Display public key (1-submit_public_key.sh)
 Displays the public key for submission to the server administrator 

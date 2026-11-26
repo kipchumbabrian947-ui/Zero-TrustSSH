@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
-# Generates a 4096-bit RSA SSH key pair named school.
+# Generates a 4096-bit RSA SSH key pair inside the .ssh directory.
 
-ssh-keygen -t rsa -b 4096 -f school -N "betty"
+if [ -f "$HOME/.ssh/school" ]; then
+    echo "SSH key already exists. No new key generated."
+    exit 1
+fi
+
+ssh-keygen -t rsa -b 4096 -f "$HOME/.ssh/school" -N "betty"
